@@ -1,0 +1,477 @@
+body {
+  font-family: "Poppins", sans-serif; /* Mengatur font default untuk seluruh halaman */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Warna teks default */
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600; /* Menggunakan bobot lebih tebal untuk heading */
+  color: #0288d1; /* Warna biru untuk heading */
+}
+
+p,
+li {
+  font-weight: 300; /* Bobot ringan untuk paragraf dan daftar */
+  line-height: 1.6; /* Memberikan spasi antar baris */
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+header {
+  background: #0288d1;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+section {
+  padding: 20px;a-bg;
+  text-align: center;
+}
+#home {
+  background-image: url("images/IMG_2942.JPG"); /* Ganti dengan path gambar Anda */
+  background-size: cover; /* Membuat gambar menutupi seluruh area */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  color: white; /* Mengubah warna teks agar kontras dengan background */
+  text-align: center; /* Memusatkan teks */
+  padding: 100px 20px; /* Memberikan jarak di sekitar konten */
+  min-height: 100vh; /* Memastikan tinggi minimum sama dengan tinggi layar */
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column;
+  justify-content: center; /* Memusatkan konten secara vertikal */
+  align-items: center; /* Memusatkan konten secara horizontal */
+}
+
+#home h1 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2em;
+  max-width: 600px; /* Membatasi lebar teks */
+}
+#about {
+  background-image: url('images/latar1.JPG'); /* Ganti dengan gambar latar untuk About Us */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Memberikan jarak antara gambar dan teks */
+  flex-wrap: wrap; /* Memastikan tata letak responsif */
+}
+
+.about-content img {
+  width: 300px; /* Menentukan lebar gambar */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 8px;
+  object-fit: cover; /* Memastikan gambar tetap proporsional dan terpotong dengan baik */
+}
+
+.about-content p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Gambar dan teks ditumpuk pada layar lebih kecil */
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 100%; /* Gambar akan memenuhi lebar kontainer pada layar kecil */
+  }
+}
+#courses {
+  background-color: #f3f4f6; /* Soft background color */
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#courses h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#courses ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+#pricing {
+  background-image: url('images/latar2.JPG'); /* Change to your pricing background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgb(57, 30, 212);
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.5rem;
+}
+
+.course-container {
+  display: flex; /* Mengatur elemen anak menjadi sejajar */
+  justify-content: space-between; /* Spasi antar elemen */
+  gap: 20px; /* Jarak antar kursus */
+  flex-wrap: wrap; /* Membungkus jika layar sempit */
+}
+
+.course {
+  flex: 1 1 calc(33.333% - 20px); /* Tiga kolom, dengan jarak 20px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+}
+
+.course h3 {
+  color: #0288d1;
+  margin: 10px 0;
+}
+
+.course p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .course {
+    flex: 1 1 calc(50% - 20px); /* Dua kolom pada layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .course {
+    flex: 1 1 100%; /* Satu kolom pada layar sangat kecil */
+  }
+}
+
+
+#contact {
+  background-color: #0288d1; /* Bright blue background for contact section */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#contact p, #contact form {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Spacing between icons */
+}
+
+.social-icon img {
+  width: 30px; /* Set the size of the icons */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: scale(1.2); /* Hover effect to make the icon bigger */
+}
+
+/* Responsive Icon Positioning */
+@media (max-width: 768px) {
+  .social-icons {
+    display: flex; /* Hide icons in mobile view */
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-links.active + .social-icons {
+    display: flex; /* Show icons when menu is active */
+  }
+}
+
+
+form input, form textarea, form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+form button {
+  background-color: #005b9f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #004a86;
+}
+/* Bagian Tambahan */
+section h2 {
+  color: #0288d1;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  font-size: 1em;
+}
+
+form button {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #026aa7;
+}
+ul {
+  list-style-type: none; /* Menghilangkan bullet points */
+  padding: 0; /* Menghilangkan padding default */
+}
+
+ul li {
+  padding: 5px 0; /* Memberikan jarak antar item */
+}
+.course-container {
+  display: flex; /* Mengatur elemen anak menjadi sejajar */
+  justify-content: space-between; /* Spasi antar elemen */
+  gap: 20px; /* Jarak antar kursus */
+  flex-wrap: wrap; /* Membungkus jika layar sempit */
+}
+
+.course {
+  flex: 1 1 calc(33.333% - 20px); /* Tiga kolom, dengan jarak 20px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+
+.course img {
+  width: 100%; /* Memastikan gambar memenuhi lebar container */
+  height: 300px; /* Menetapkan tinggi konsisten untuk semua gambar */
+  object-fit: cover; /* Memotong gambar agar tetap proporsional */
+  border-bottom: 2px solid #ddd; /* Opsional: garis pemisah di bawah gambar */
+  border-radius: 5px 5px 0 0; /* Membulatkan sudut atas gambar */
+}
+
+.course h3 {
+  color: #0288d1;
+  margin: 10px 0;
+}
+
+.course p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .course {
+    flex: 1 1 calc(50% - 20px); /* Dua kolom pada layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .course {
+    flex: 1 1 100%; /* Satu kolom pada layar sangat kecil */
+  }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0288d1;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+#testimonials {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#testimonials h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.testimonial-item p {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-item h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.testimonial-item p:last-child {
+  font-size: 1.1em;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .testimonial-item {
+    width: 100%;
+  }
+}
+
+#map {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f3f4f6;
+}
+
+#map h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+}
+
+
+
+footer {
+  background: #026aa7;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
